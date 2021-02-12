@@ -34,6 +34,12 @@ public class App
         write(destination,list);
         System.out.println("----------------------------------------------------------------------------------");
         System.out.println("Exercise 4 :");
+        File copyDestination = new File("C:\\Users\\kyoub\\IdeaProjects\\Java I\\Java-IO\\FolderDestination");
+        File copySource = new File("C:\\Users\\kyoub\\IdeaProjects\\Java I\\Java-IO\\FileToCopy");
+        copy(copyDestination,copySource);
+        System.out.println("----------------------------------------------------------------------------------");
+        System.out.println("Exercise 5 :");
+
 
 
 
@@ -86,4 +92,23 @@ public class App
         }
           return source;
     }
+
+    public static void copy(File destination, File source){
+        try {
+            BufferedInputStream in = new BufferedInputStream(new FileInputStream(source));
+            BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream(destination));
+
+            byte[] buffer = new byte[1024];
+            int num;
+            while((num=in.read()) != -1){
+                out.write(num);
+                out.flush();
+            }
+
+        }  catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
 }
+
