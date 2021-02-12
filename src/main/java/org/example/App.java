@@ -2,6 +2,7 @@ package org.example;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -22,6 +23,19 @@ public class App
         File ReadingNames =new File("C:\\Users\\kyoub\\IdeaProjects\\Java I\\Java-IO\\Names.txt");
 //        System.out.println(read2(ReadingNames));
         System.out.println("----------------------------------------------------------------------------------");
+        System.out.println("Exercise 3 :");
+        Collection<String> list = new ArrayList<>();
+        list.add("Mehrdad");
+        list.add("Simon");
+        list.add("Tom");
+        list.add("Jack");
+        list.add("Gorge");
+        File destination = new File("C:\\Users\\kyoub\\IdeaProjects\\Java I\\Java-IO\\Exercise3.txt");
+        write(destination,list);
+        System.out.println("----------------------------------------------------------------------------------");
+        System.out.println("Exercise 4 :");
+
+
 
 
     }
@@ -57,5 +71,19 @@ public class App
             e.printStackTrace();
         }
         return list;
+    }
+
+    public static Collection<String> write(File destination , Collection<String> source){
+        try {
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(destination));
+            for(String str : source){
+                bufferedWriter.write(str);
+                bufferedWriter.newLine();
+            }
+            bufferedWriter.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+          return source;
     }
 }
