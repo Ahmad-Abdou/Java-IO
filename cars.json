@@ -1,0 +1,23 @@
+[ {
+  "carId" : "7a5368d5-7de2-4edb-b707-528be823b0fc",
+  "regNumber" : "HFW125",
+  "brand" : "BMW",
+  "model" : "T35",
+  "regDate" : "2010-05-09",
+  "owner" : {
+    "name" : "Simon",
+    "birthDay" : "1980-05-06",
+    "ownerID" : "7441d0a0-4d39-4926-a982-365319f4980a"
+  }
+}, {
+  "carId" : "b3e66224-9469-4b99-9936-429683c580c1",
+  "regNumber" : "KFT736",
+  "brand" : "Audi",
+  "model" : "R8",
+  "regDate" : "2012-02-11",
+  "owner" : {
+    "name" : "Jack",
+    "birthDay" : "1987-10-09",
+    "ownerID" : "561757a5-5aba-4601-a75b-28e4e9459d6c"
+  }
+} ]
